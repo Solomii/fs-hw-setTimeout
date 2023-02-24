@@ -13,12 +13,6 @@ function showMessage() {
     showSubscribeMsg.classList.add("subscribe");
     showSubscribeMsg.style.display = "block";
 
-    // const form = document.createElement("form");
-    // const formInput = document.createElement("input");
-    // formInput.setAttribute("type", "text");
-    // formInput.setAttribute("name", "FullName");
-    // formInput.setAttribute("placeholder", "Full Name");
-
     const innerButton = document.createElement("button");
     innerButton.innerText = "Subsciribe";
     innerButton.addEventListener("click", () => {
