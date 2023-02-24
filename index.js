@@ -1,11 +1,32 @@
 "use strict";
+
 const btn = document.getElementById("btn");
 
 const showSubscribeMsg = document.getElementById("popupWindow");
 
 function showMessage() {
-  showSubscribeMsg.innerHTML = "Subscribe!";
-  showSubscribeMsg.classList.add("subscribe");
+    const titleShowSubcribeMsg = document.createElement(
+        "h3",
+        "Please subscribe!"
+    );
+    titleShowSubcribeMsg.innerText = "Please subscribe!";
+    showSubscribeMsg.classList.add("subscribe");
+    showSubscribeMsg.style.display = "block";
+
+    // const form = document.createElement("form");
+    // const formInput = document.createElement("input");
+    // formInput.setAttribute("type", "text");
+    // formInput.setAttribute("name", "FullName");
+    // formInput.setAttribute("placeholder", "Full Name");
+
+    const innerButton = document.createElement("button");
+    innerButton.innerText = "Subsciribe";
+    innerButton.addEventListener("click", () => {
+        showSubscribeMsg.style.display = "none";
+        console.log("subscirbe inner button");
+    });
+
+    showSubscribeMsg.append(titleShowSubcribeMsg, innerButton);
 }
 
 let timeoutID = setTimeout(showMessage, 3000);
